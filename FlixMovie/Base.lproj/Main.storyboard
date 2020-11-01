@@ -181,6 +181,7 @@
                                 <size key="customSize" width="200" height="266"/>
                                 <connections>
                                     <outlet property="posterView" destination="GMC-YK-GLM" id="O4t-vh-MP8"/>
+                                    <segue destination="lt4-Rx-kXM" kind="show" id="nx8-RG-ipw"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -216,7 +217,6 @@
         <!--Superhero-->
         <scene sceneID="N6h-Io-rDc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wHQ-xm-JpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kvd-ti-LTg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Superhero" image="superhero_tabbar_item" id="Vlj-Ja-Pm6"/>
                     <toolbarItems/>
@@ -229,8 +229,56 @@
                         <segue destination="WZv-96-AAn" kind="relationship" relationship="rootViewController" id="OLG-SC-O5d"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHQ-xm-JpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-584.05797101449275" y="81.696428571428569"/>
+        </scene>
+        <!--Movie Grid Details View Controller-->
+        <scene sceneID="dGj-OA-jqE">
+            <objects>
+                <viewController id="lt4-Rx-kXM" customClass="MovieGridDetailsViewController" customModule="FlixMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T0S-t8-yuf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ws-h9-Cee">
+                                <rect key="frame" x="0.0" y="36" width="414" height="271"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDY-NV-Vi3">
+                                <rect key="frame" x="20" y="209" width="114" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0y-fd-n9O">
+                                <rect key="frame" x="142" y="315" width="252" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i46-bz-fFt">
+                                <rect key="frame" x="20" y="389" width="374" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fqV-iN-uZ3"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0eY-uI-bno"/>
+                    <connections>
+                        <outlet property="backdropView" destination="1Ws-h9-Cee" id="6u0-1C-WD8"/>
+                        <outlet property="posterView" destination="WDY-NV-Vi3" id="WEi-t9-jpH"/>
+                        <outlet property="synopsisLabel" destination="i46-bz-fFt" id="c8O-Iz-wMc"/>
+                        <outlet property="titleLabel" destination="m0y-fd-n9O" id="S5C-9a-hAa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQy-5I-7VU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584.05797101449275" y="1528.7946428571429"/>
         </scene>
     </scenes>
     <resources>
